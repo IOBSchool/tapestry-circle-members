@@ -6,7 +6,7 @@
 
   // 確定後に差し替え
   var ZOOM_URL      = '';   // [ZOOM_URL] 4回共通のZoom URL
-  var AI_COACH_URL  = '';   // [AI_COACH_URL] AIコーチ本番URL
+  var AI_COACH_URL  = 'https://thread-ai-coach-circle.vercel.app/';
 
   var gate = document.getElementById('gate');
   var main = document.getElementById('main');
