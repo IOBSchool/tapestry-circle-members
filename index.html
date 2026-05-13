@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Tapestry Circle ── メンバー専用ページ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<!-- ============ GATE ============ -->
+<div id="gate" class="gate" hidden>
+  <div class="gate-card">
+    <p class="gate-lead">TAPESTRY&nbsp;CIRCLE</p>
+    <h1 class="gate-title">メンバー専用ページ</h1>
+    <p class="gate-sub">合言葉を入れて、扉を開けてください🌿</p>
+    <div id="gate-form" autocomplete="off">
+      <input id="gate-input" type="text" inputmode="latin" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="合言葉" aria-label="合言葉" onkeydown="if(event.key==='Enter'){event.preventDefault();doGateUnlock();}">
+      <button type="button" onclick="doGateUnlock()">入る</button>
+    </div>
+    <p id="gate-error" class="gate-error" hidden>合言葉がちがうみたい。もう一度どうぞ。</p>
+    <div class="gate-threads" aria-hidden="true"></div>
+    <script>
+      function doGateUnlock(){
+        var input = document.getElementById('gate-input');
+        var raw = input.value || '';
+        var v = raw.replace(/[０-９Ａ-Ｚａ-ｚ]/g, function(c){ return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); }).toLowerCase().replace(/[^a-z0-9]/g, '');
+        if(v === 'tapestry26'){
+          try{ localStorage.setItem('tapestry-circle-members-auth','ok'); }catch(e){}
+          document.getElementById('gate').hidden = true;
+          document.getElementById('main').hidden = false;
+          if(window.__afterUnlock) window.__afterUnlock();
+          window.scrollTo(0,0);
+        } else {
+          document.getElementById('gate-error').hidden = false;
+        }
+      }
+    </script>
+  </div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<main id="main" hidden>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="threads-band" aria-hidden="true"></div>
+    <p class="brand">TAPESTRY&nbsp;CIRCLE</p>
+    <h1 class="page-title">タペストリーに詰めた思い</h1>
+    <p class="page-sub">メンバー専用ページへ、ようこそ🌿</p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-eyebrow">TAPESTRY&nbsp;CIRCLE</p>
+      <h2 class="hero-h">
+        一年かけて、<br>
+        自分という織物を、<br>
+        ゆっくり、編んでいく。
+      </h2>
+      <p class="hero-lead">
+        糸の一本一本に、<br>
+        あなたが過ごした時間が、編み込まれていく。
+      </p>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="roadmap">
+    <div class="wrap">
+      <p class="section-eyebrow">Roadmap</p>
+      <h3 class="section-h">一年の歩き方</h3>
+      <p class="rm-intro">
+        年に4回、季節ごとに集う日があります。<br>
+        その合間を、個別セッション・BAND・AIコーチが、<br>
+        静かに織り込んでいきます。
+      </p>
+
+      <div class="rm-figure" aria-label="一年のタペストリー図">
+        <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="weft" x1="0" x2="1">
+              <stop offset="0%"  stop-color="#c89690"/>
+              <stop offset="25%" stop-color="#7a8456"/>
+              <stop offset="50%" stop-color="#7a8b96"/>
+              <stop offset="75%" stop-color="#c8a14b"/>
+              <stop offset="100%" stop-color="#9a87a8"/>
+            </linearGradient>
+          </defs>
+          <!-- 横糸(weft) -->
+          <line x1="40" y1="110" x2="560" y2="110" stroke="url(#weft)" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- 細い装飾糸 -->
+          <line x1="40" y1="96"  x2="560" y2="96"  stroke="#e6ddd0" stroke-width="1"/>
+          <line x1="40" y1="124" x2="560" y2="124" stroke="#e6ddd0" stroke-width="1"/>
+          <!-- 4つの結び目 -->
+          <g font-family="'Cormorant Garamond', serif" font-size="11" fill="#6b6158" text-anchor="middle" letter-spacing="2">
+            <g>
+              <circle cx="100" cy="110" r="9" fill="#c89690"/>
+              <text x="100" y="78">JUN</text>
+              <text x="100" y="150" font-family="'Noto Serif JP', serif" font-size="11">6/25</text>
+            </g>
+            <g>
+              <circle cx="253" cy="110" r="9" fill="#7a8456"/>
+              <text x="253" y="78">SEP</text>
+              <text x="253" y="150" font-family="'Noto Serif JP', serif" font-size="11">9/17</text>
+            </g>
+            <g>
+              <circle cx="407" cy="110" r="9" fill="#7a8b96"/>
+              <text x="407" y="78">DEC</text>
+              <text x="407" y="150" font-family="'Noto Serif JP', serif" font-size="11">12/17</text>
+            </g>
+            <g>
+              <circle cx="560" cy="110" r="9" fill="#c8a14b"/>
+              <text x="560" y="78">MAR</text>
+              <text x="560" y="150" font-family="'Noto Serif JP', serif" font-size="11">3/18</text>
+            </g>
+          </g>
+          <!-- 縦糸(warp)の点線 -->
+          <g stroke="#9a87a8" stroke-width="1" stroke-dasharray="2 4" opacity=".55">
+            <line x1="176" y1="60" x2="176" y2="170"/>
+            <line x1="330" y1="60" x2="330" y2="170"/>
+            <line x1="483" y1="60" x2="483" y2="170"/>
+          </g>
+          <text x="300" y="200" font-family="'Noto Serif JP', serif" font-size="10.5" fill="#6b6158" text-anchor="middle" letter-spacing="2">個別セッション・BAND・AIコーチが、点と点の間を編んでいく</text>
+        </svg>
+      </div>
+
+      <ul class="rm-list">
+        <li><span class="rm-dot" style="background:#c89690"></span>6月 ── 春から夏へ。これからの一年に、糸の色を選ぶ。</li>
+        <li><span class="rm-dot" style="background:#7a8456"></span>9月 ── 夏の終わり。半年を振り返り、糸を整える。</li>
+        <li><span class="rm-dot" style="background:#7a8b96"></span>12月 ── 年の暮れ。今年の織りを、そっと畳む。</li>
+        <li><span class="rm-dot" style="background:#c8a14b"></span>3月 ── 一年の最後。次の春へ、結び直す。</li>
+      </ul>
+      <p class="rm-note">※ ロードマップは叩き台です。みなさんの声を聞きながら、少しずつ整えていきます。</p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule">
+    <div class="wrap">
+      <p class="section-eyebrow">Group Coaching</p>
+      <h3 class="section-h">年間グループコーチング日程</h3>
+      <p class="sc-intro">全4回・木曜 20:00 JST・Zoomリンクは全回共通です。</p>
+
+      <ul class="sc-list">
+        <li class="sc-item">
+          <span class="sc-color" style="background:#c89690"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第1回 ── 初夏</p>
+            <p class="sc-date">2026年 6月25日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-jun.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#7a8456"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第2回 ── 初秋</p>
+            <p class="sc-date">2026年 9月17日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-sep.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#7a8b96"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第3回 ── 冬</p>
+            <p class="sc-date">2026年12月17日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-dec.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#c8a14b"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第4回 ── 春</p>
+            <p class="sc-date">2027年 3月18日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-mar.ics" download>カレンダーに追加</a>
+        </li>
+      </ul>
+
+      <div class="zoom-box">
+        <p class="zoom-label">Zoom（全回共通）</p>
+        <a id="zoom-link" class="btn-line" href="#" target="_blank" rel="noopener">Zoomを開く</a>
+        <p class="zoom-note">※ Zoom URLは確定後に差し替えます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIVIDUAL SESSION -->
+  <section class="indiv">
+    <div class="wrap">
+      <p class="section-eyebrow">Individual Session</p>
+      <h3 class="section-h">個別セッション（Tapestry限定）</h3>
+      <p class="indiv-body">
+        Tapestryは基本的には個別セッションはありませんが、<br>
+        セッションを受けたくなった時に受けられるように、<br>
+        Tapestry限定の個別セッションプランを作成しました。
+      </p>
+      <p class="indiv-body">
+        別料金とはなりますが、<br>
+        「モヤモヤを整理したい」<br>
+        「なつこさんから活力をもらいたい」<br>
+        などのタイミングでご活用ください。
+      </p>
+      <div class="indiv-cta">
+        <a class="btn-fill" href="https://iobschool.github.io/tapestry-circle/individual-session.html" target="_blank" rel="noopener">個別セッションを申し込む →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI COACH -->
+  <section class="coach">
+    <div class="wrap">
+      <p class="section-eyebrow">AI Coach</p>
+      <h3 class="section-h">THE&nbsp;THREAD AIコーチ ── Tapestry版</h3>
+      <p class="coach-lead">
+        「自分に話を聞いてもらう」を、毎日の習慣に。<br>
+        通年使える、Tapestry Circle専用のAIコーチです。
+      </p>
+      <div class="coach-cta">
+        <a id="coach-link" class="btn-fill" href="#" target="_blank" rel="noopener">AIコーチを開く →</a>
+      </div>
+      <p class="coach-note">※ AIコーチURLは現在作成中です。完成後にこちらに差し替えます。</p>
+      <p class="coach-caution">⚠ キャッシュをクリアすると、これまでの対話履歴は消えてしまいます。<br>大事な対話は、コピペでメモに保存しておいてください🌿</p>
+    </div>
+  </section>
+
+  <!-- BAND -->
+  <section class="band">
+    <div class="wrap">
+      <p class="section-eyebrow">BAND</p>
+      <h3 class="section-h">日々のやり取りはBANDで</h3>
+      <p class="band-lead">
+        日々のやり取り・問いの共有はBANDで。<br>
+        言葉にならないままでも、置いていける場所です。
+      </p>
+      <div class="band-cta">
+        <a class="btn-fill" href="https://www.band.us/band/102350054" target="_blank" rel="noopener">BANDコミュニティへ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="threads-band" aria-hidden="true"></div>
+    <p class="foot-sign">レムケなつこ ＋ コーチはったー</p>
+    <p class="foot-copy">© Institut für Organic Business GmbH</p>
+    <button id="logout" class="logout" type="button">ログアウト</button>
+  </footer>
+
+</main>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tapestry Circle//Members//JP
+BEGIN:VEVENT
+UID:tapestry-mar-2026@iobschool.github.io
+DTSTAMP:20260513T000000Z
+DTSTART;TZID=Asia/Tokyo:20270318T200000
+DTEND;TZID=Asia/Tokyo:20270318T213000
+SUMMARY:Tapestry Circle グループコーチング
+DESCRIPTION:Tapestry Circle 年間グループコーチング。Zoom URLはメンバーページから。https://iobschool.github.io/tapestry-circle-members/
+LOCATION:Zoom
+END:VEVENT
+END:VCALENDAR
