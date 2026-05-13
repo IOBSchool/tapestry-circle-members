@@ -7,7 +7,8 @@ DTSTAMP:20260513T000000Z
 DTSTART;TZID=Asia/Tokyo:20261217T200000
 DTEND;TZID=Asia/Tokyo:20261217T213000
 SUMMARY:Tapestry Circle グループコーチング
-DESCRIPTION:Tapestry Circle 年間グループコーチング。Zoom URLはメンバーページから。https://iobschool.github.io/tapestry-circle-members/
-LOCATION:Zoom
+DESCRIPTION:Tapestry Circle 年間グループコーチング\n\nZoom: https://us06web.zoom.us/j/5403853001?pwd=NnBrSmxBeWYxZXhuWkdIK1ZoZW5XQT09&omn=89153671389\nミーティングID: 540 385 3001\nパスコード: 7RP26b\n\nメンバーページ: https://iobschool.github.io/tapestry-circle-members/
+LOCATION:Zoom (https://us06web.zoom.us/j/5403853001?pwd=NnBrSmxBeWYxZXhuWkdIK1ZoZW5XQT09&omn=89153671389)
+URL:https://us06web.zoom.us/j/5403853001?pwd=NnBrSmxBeWYxZXhuWkdIK1ZoZW5XQT09&omn=89153671389
 END:VEVENT
 END:VCALENDAR

@@ -5,7 +5,7 @@
   var STORAGE_KEY = 'tapestry-circle-members-auth';
 
   // 確定後に差し替え
-  var ZOOM_URL      = '';   // [ZOOM_URL] 4回共通のZoom URL
+  var ZOOM_URL      = 'https://us06web.zoom.us/j/5403853001?pwd=NnBrSmxBeWYxZXhuWkdIK1ZoZW5XQT09&omn=89153671389';
   var AI_COACH_URL  = 'https://thread-ai-coach-circle.vercel.app/';
 
   var gate = document.getElementById('gate');

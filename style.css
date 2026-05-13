@@ -223,6 +223,18 @@ section{padding:52px 0;border-top:1px solid var(--line)}
   letter-spacing:.2em;color:var(--sub);margin:0 0 12px;
 }
 .zoom-note{font-size:11.5px;color:var(--sub);margin:14px 0 0;line-height:1.8}
+.zoom-info{
+  display:grid;grid-template-columns:auto 1fr;gap:4px 14px;
+  margin:18px auto 0;max-width:240px;
+  font-size:12.5px;text-align:left;
+}
+.zoom-info dt{
+  color:var(--sub);letter-spacing:.08em;
+  font-family:"Cormorant Garamond",serif;
+}
+.zoom-info dd{
+  margin:0;letter-spacing:.06em;font-family:"Noto Serif JP",serif;
+}
 
 /* INDIVIDUAL */
 .indiv-body{
