@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -55,10 +55,10 @@
 
     <nav class="qn-bar" aria-label="クイックリンク">
       <a class="qn-chip" href="#schedule"><span class="qn-dot" style="background:#c89690"></span>日程</a>
+      <a class="qn-chip" href="#roadmap"><span class="qn-dot" style="background:#9a87a8"></span>歩き方</a>
       <a class="qn-chip" href="#coach"><span class="qn-dot" style="background:#7a8456"></span>AIコーチ</a>
       <a class="qn-chip" href="#band"><span class="qn-dot" style="background:#7a8b96"></span>BAND</a>
       <a class="qn-chip" href="#indiv"><span class="qn-dot" style="background:#c8a14b"></span>個別</a>
-      <a class="qn-chip" href="#roadmap"><span class="qn-dot" style="background:#9a87a8"></span>歩き方</a>
     </nav>
   </header>
 
@@ -77,6 +77,56 @@
         あなたが過ごした時間が、<br>
         編み込まれていく。
       </p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule" id="schedule">
+    <div class="wrap">
+      <p class="section-eyebrow">Group Coaching</p>
+      <h3 class="section-h">年間グループコーチング日程</h3>
+      <p class="sc-intro">全4回・木曜 20:00 JST・Zoomリンクは全回共通です。</p>
+
+      <ul class="sc-list">
+        <li class="sc-item">
+          <span class="sc-color" style="background:#c89690"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第1回 ── 初夏</p>
+            <p class="sc-date">2026年 6月25日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-jun.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#7a8456"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第2回 ── 初秋</p>
+            <p class="sc-date">2026年 9月17日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-sep.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#7a8b96"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第3回 ── 冬</p>
+            <p class="sc-date">2026年12月17日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-dec.ics" download>カレンダーに追加</a>
+        </li>
+        <li class="sc-item">
+          <span class="sc-color" style="background:#c8a14b"></span>
+          <div class="sc-meta">
+            <p class="sc-season">第4回 ── 春</p>
+            <p class="sc-date">2027年 3月18日（木）20:00 JST</p>
+          </div>
+          <a class="sc-ics" href="assets/tapestry-mar.ics" download>カレンダーに追加</a>
+        </li>
+      </ul>
+
+      <div class="zoom-box">
+        <p class="zoom-label">Zoom（全回共通）</p>
+        <a id="zoom-link" class="btn-line" href="#" target="_blank" rel="noopener">Zoomを開く</a>
+        <p class="zoom-note">※ Zoom URLは確定後に差し替えます。</p>
+      </div>
     </div>
   </section>
 
@@ -150,56 +200,6 @@
     </div>
   </section>
 
-  <!-- SCHEDULE -->
-  <section class="schedule" id="schedule">
-    <div class="wrap">
-      <p class="section-eyebrow">Group Coaching</p>
-      <h3 class="section-h">年間グループコーチング日程</h3>
-      <p class="sc-intro">全4回・木曜 20:00 JST・Zoomリンクは全回共通です。</p>
-
-      <ul class="sc-list">
-        <li class="sc-item">
-          <span class="sc-color" style="background:#c89690"></span>
-          <div class="sc-meta">
-            <p class="sc-season">第1回 ── 初夏</p>
-            <p class="sc-date">2026年 6月25日（木）20:00 JST</p>
-          </div>
-          <a class="sc-ics" href="assets/tapestry-jun.ics" download>カレンダーに追加</a>
-        </li>
-        <li class="sc-item">
-          <span class="sc-color" style="background:#7a8456"></span>
-          <div class="sc-meta">
-            <p class="sc-season">第2回 ── 初秋</p>
-            <p class="sc-date">2026年 9月17日（木）20:00 JST</p>
-          </div>
-          <a class="sc-ics" href="assets/tapestry-sep.ics" download>カレンダーに追加</a>
-        </li>
-        <li class="sc-item">
-          <span class="sc-color" style="background:#7a8b96"></span>
-          <div class="sc-meta">
-            <p class="sc-season">第3回 ── 冬</p>
-            <p class="sc-date">2026年12月17日（木）20:00 JST</p>
-          </div>
-          <a class="sc-ics" href="assets/tapestry-dec.ics" download>カレンダーに追加</a>
-        </li>
-        <li class="sc-item">
-          <span class="sc-color" style="background:#c8a14b"></span>
-          <div class="sc-meta">
-            <p class="sc-season">第4回 ── 春</p>
-            <p class="sc-date">2027年 3月18日（木）20:00 JST</p>
-          </div>
-          <a class="sc-ics" href="assets/tapestry-mar.ics" download>カレンダーに追加</a>
-        </li>
-      </ul>
-
-      <div class="zoom-box">
-        <p class="zoom-label">Zoom（全回共通）</p>
-        <a id="zoom-link" class="btn-line" href="#" target="_blank" rel="noopener">Zoomを開く</a>
-        <p class="zoom-note">※ Zoom URLは確定後に差し替えます。</p>
-      </div>
-    </div>
-  </section>
-
   <!-- AI COACH -->
   <section class="coach" id="coach">
     <div class="wrap">
@@ -263,6 +263,6 @@
 
 </main>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
