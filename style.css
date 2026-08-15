@@ -1,17 +1,21 @@
 /* Tapestry Circle ── Members Page (mobile-first) */
 :root{
-  --bg:#faf8f4;
-  --bg-soft:#fdfbf6;
-  --ink:#2a2a2e;
-  --sub:#6b6158;
-  --line:#e6ddd0;
+  --bg:#F1E8D6;
+  --bg-soft:#F8F0DD;
+  --ink:#2B2318;
+  --sub:#6B5F4E;
+  --line:#E4DCC8;
   --card:#ffffff;
   --rose:#c89690;
   --olive:#7a8456;
   --blue:#7a8b96;
   --mustard:#c8a14b;
   --purple:#9a87a8;
-  --accent:#8a1e3f;
+  --accent:#C9822E;
+  --deep1:#191428;
+  --deep2:#2A2140;
+  --deep-ink:#F4EEDF;
+  --deep-sub:#C9BFA0;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 [hidden]{display:none !important}
@@ -49,7 +53,7 @@ button{font-family:inherit}
 /* ========== GATE ========== */
 .gate{
   position:fixed;inset:0;
-  background:linear-gradient(180deg,#faf8f4 0%,#efe7d8 100%);
+  background:linear-gradient(180deg,#F1E8D6 0%,#E9D9B0 100%);
   display:flex;align-items:center;justify-content:center;
   padding:24px;z-index:1000;
 }
@@ -113,22 +117,21 @@ button{font-family:inherit}
 
 /* ========== HERO ========== */
 .hero{
-  padding:52px 0 60px;text-align:center;
-  background:
-    linear-gradient(180deg,rgba(250,248,244,.4) 0%,rgba(250,248,244,.95) 100%),
-    radial-gradient(ellipse at top,#f1e7d2 0%,transparent 60%);
+  padding:60px 0 68px;text-align:center;
+  background:linear-gradient(160deg,var(--deep1) 0%,var(--deep2) 100%);
   border-top:none;
 }
 .hero-eyebrow{
-  letter-spacing:.32em;font-size:10.5px;color:var(--accent);
+  letter-spacing:.32em;font-size:10.5px;color:var(--mustard);
   font-family:"Cormorant Garamond",serif;margin:0 0 22px;
 }
 .hero-h{
   font-size:22px;font-weight:500;line-height:2;
   letter-spacing:.05em;margin:0 0 24px;
+  color:var(--deep-ink);
 }
 .hero-lead{
-  font-size:13.5px;color:var(--sub);line-height:2.1;margin:0;
+  font-size:13.5px;color:var(--deep-sub);line-height:2.1;margin:0;
 }
 
 /* ========== SECTIONS ========== */
@@ -175,7 +178,7 @@ section{padding:52px 0;border-top:1px solid var(--line)}
   line-height:2.05;margin:0 0 28px;
 }
 .rm-figure{
-  background:#fff;border:1px solid var(--line);border-radius:4px;
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
   padding:14px 10px;margin:0 0 24px;
 }
 .rm-figure svg{width:100%;height:auto;display:block}
