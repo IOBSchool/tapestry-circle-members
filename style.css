@@ -273,6 +273,20 @@ section{padding:52px 0;border-top:1px solid var(--line)}
   padding:12px 14px;margin:20px auto 0;max-width:380px;
 }
 
+.coach-update{
+  max-width:380px;margin:20px auto 0;padding:14px 16px;
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:3px;
+}
+.coach-update-label{
+  font-family:"Cormorant Garamond","Noto Serif JP",serif;
+  font-size:11px;letter-spacing:.2em;color:var(--accent);margin:0 0 8px;
+}
+.coach-update ul{list-style:none}
+.coach-update li{font-size:12.5px;line-height:1.9;color:var(--ink);padding-left:1em;text-indent:-1em}
+.coach-update li::before{content:"・"}
+.coach-update li+li{margin-top:6px}
+
 /* BAND */
 .band-lead{font-size:14px;line-height:2.05;text-align:center;margin:0}
 
